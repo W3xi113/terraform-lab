@@ -65,7 +65,7 @@ resource "ibm_is_instance" "instance-alv-1" {
   image   = var.image
   profile = var.profile
   primary_network_interface {
-    subnet = ibm_is_subnet.subnet1.id
+    subnet = ibm_is_subnet.subnet1alv.id
   }
   vpc  = ibm_is_vpc.vpc1.id
   zone = var.zone1
@@ -80,7 +80,7 @@ resource "ibm_is_instance" "instance-alv-3" {
   profile = var.profile
 
   primary_network_interface {
-    subnet = ibm_is_subnet.subnet3.id
+    subnet = ibm_is_subnet.subnet3alv.id
   }
   vpc  = ibm_is_vpc.vpc1.id
   zone = var.zone3
@@ -94,7 +94,7 @@ resource "ibm_is_instance" "instance-alv-2" {
   image   = var.image
   profile = var.profile
   primary_network_interface {
-    subnet = ibm_is_subnet.subnet2.id
+    subnet = ibm_is_subnet.subnet2alv.id
   }
   vpc  = ibm_is_vpc.vpc1.id
   zone = var.zone2
